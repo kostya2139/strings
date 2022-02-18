@@ -16,13 +16,13 @@ string word(string &s, const string &separator, int &pos)
 
 bool is_palindrom(string s) {
 	for (int i = 0; i < s.size(); ++i)
+    {
 		if (!isalpha(s[i]))
 			s.erase(i-- , 1);
+        else s[i]=toupper(s[i]);
+    }
     if (s.empty()) return 0;
-	for (int i = 0; i < s.size(); ++i)
-		if (tolower(s[i]) != tolower(s[s.size()-1-i]))
-			return 0;
-	return 1;
+	return s==string(s.rbegin(), s.rend());
 }
 
 int main()
