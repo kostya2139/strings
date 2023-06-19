@@ -1,2 +1,2 @@
 # strings
-//solutions of school contexts abouts strings
+//solutions of school contests abouts strings
